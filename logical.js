@@ -47,5 +47,29 @@ c=null;
 d="Hello"
 c || d
 
-
-    
+a=true;
+b=false;
+console.log(!(a && b))
+console.log(!(a||b))
+console.log(!a)
+console.log(!b)
+console.log(!!a)
+console.log(!!b)
+c="";
+console.log("C is"+!c)
+d=true;            
+console.log(c && d)   
+console.log(c || d)
+console.log(!!c)
+e=null;
+console.log("E is"+!e)
+f=true;            
+console.log(e && f)   
+console.log(e || f)
+console.log(!!e)
+g=0;
+console.log("G is"+!g)
+h=true;            
+console.log(g && h)   
+console.log(g || h)
+console.log(!!g)
