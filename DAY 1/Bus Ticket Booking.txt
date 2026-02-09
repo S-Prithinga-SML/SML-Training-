@@ -1,0 +1,19 @@
+A bus booking system checks seat availability.
+If seats are available, book the ticket and reduce the seat count.
+If not, display a message that seats are full.
+
+Function booking()
+    if availableseat >= neededseat THEN
+    availableseat = availableseat - neededseat
+    Return "Ticket booked successfully"
+    ELSE
+    Return "Seats are full"
+    END IF
+    END FUNCTION
+
+Function main()
+    availableseat=12
+    neededseat=5
+    result=booking()
+    DISPLAY result
+    END FUNCTION

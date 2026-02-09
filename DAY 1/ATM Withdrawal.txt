@@ -1,0 +1,24 @@
+ATM Withdrawal
+A user enters an amount to withdraw from an ATM.
+If the account balance is sufficient, allow the withdrawal and update the balance.
+Otherwise, display an insufficient balance message.
+
+
+
+FUNCTION withdrawal(amount,withdrawal)
+    IF amount >= withdrawal THEN
+     amount =amount-withdrawal
+    Return amount
+     ELSE 
+        DISPLAY "Insufficient balance"
+        Return amount
+    ENDIF
+
+    ENDFUNCTION
+
+FUNCTION main()
+    amount=10000
+    withdrawal=5000
+    balance=withdrawal(amount,withdrawal)
+    DISPLAY "Remaining balance", balance 
+    

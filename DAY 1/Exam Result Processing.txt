@@ -1,0 +1,30 @@
+Exam Result Processing
+A system processes marks of multiple students.
+For each student, it calculates total marks and determines grade based on rules.
+Finally, it displays each student’s result.
+
+Function result(students)
+    FOR EACH students IN students
+    totalmarks = students.mark1 + students.mark2 + students.mark3
+    IF totalmarks >= 270 THEN
+    grade = "A"
+    ELSE IF totalmarks >= 240 THEN
+    grade = "B"
+    ELSE IF totalmarks >= 210 THEN
+    grade = "C"
+    ELSE
+    grade = "D"
+    END IF
+    END FOR
+    DISPLAY "Student:", student.name," Total Marks:", totalMarks," Grade:", grade Return grade
+
+    END FUNCTION
+
+Function main()
+    students=[
+    {name:"Alice", mark1:90, mark2:85, mark3:80},   
+    {name:"Bob", mark1:70, mark2:75, mark3:80},
+    {name:"Charlie", mark1:60, mark2:65, mark3:70}
+    ]
+    result(students)
+    END FUNCTION

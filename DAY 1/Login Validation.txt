@@ -1,0 +1,27 @@
+A user enters username and password.
+If both match the stored values, allow login.
+Otherwise, show an error message.
+
+
+FUNCTION validation(username,password,user)
+found = false
+    FOR EACH user in user
+    IF username == user.username AND password == user.password THEN 
+    found = true
+    break
+    END IF
+    END FOR
+    IF found THEN
+    DISPLAY "Login successful"
+    ELSE
+    DISPLAY "Invalid username or password"
+    END IF
+    END FUNCTION
+
+FUNCTION main()
+    username=user@gmail.com 
+    password=12345
+    user = [ ("user123@gmail.com ", "123"),("user@gmail.com" , "12345"),("user12345@gmail.com" , "1213456")]
+    validation(username,password,user)
+    END FUNCTION
+

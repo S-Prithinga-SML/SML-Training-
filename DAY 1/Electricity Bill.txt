@@ -1,0 +1,24 @@
+An electricity board calculates the bill amount based on units consumed.
+If units are less than or equal to 100, charge normal rate.
+If more than 100, charge higher rate.
+
+
+FUNCTION main ()
+    unit=100
+    unitrate=50
+    normalunitrate=25;
+    bill=electricitybill(unit,unitrate,normalunitrate)
+    DISPLAY bill
+    END FUNCTION
+
+FUNCTION electricitybill(bill,unitrate,normalunitrate)
+    finalunit=0
+    IF unit < = 100 THEN
+    finalunit = unit*normalunitrate
+    ELSE
+    finalunit = unit*unitrate
+    END IF
+    Return finalunit
+    END FUNCTION
+    
+

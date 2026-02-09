@@ -1,0 +1,19 @@
+Bank Loan Eligibility
+A bank checks loan eligibility based on age and monthly income.
+Only applicants who satisfy both conditions are eligible.
+
+FUNCTION eligibility(age,income)
+    IF age >= 21 AND income >= 30000 THEN
+    Return  "You are eligible for loan"
+    ELSE
+    DISPLAY " You are not eligible for loan"
+    END IF
+    END FUNCTION
+
+FUNCTION main ()
+    age=25
+    income=35000
+    result=eligibility(age,income)
+    DISPLAY result
+    END FUNCTION
+    

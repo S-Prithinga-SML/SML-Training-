@@ -1,0 +1,27 @@
+Online Shopping Discount
+A customer purchases items.
+If total amount is above ₹5000, apply a discount.
+Otherwise, no discount is applied.
+
+
+FUNCTION discount(total,discount)
+    IF total < 0 AND discount = "Null"
+    DISPLAY "Invalid input"
+    ELSE IF total > 5000 THEN
+    IF discount == "percentage"
+    total = total - (total * 0.10)
+    ELSE IF discount == "flat"
+    total = total - 500
+    END IF
+     DISPLAY "Total amount after discount", total
+     ELSE
+        DISPLAY "No discount applied. Total amount is", total
+        END IF
+        END FUNCTION
+    END IF
+
+FUNCTION main()
+    total=7000
+    discoun="percentage"
+    discount(total,discount)
+    END FUNCTION

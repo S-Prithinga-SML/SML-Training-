@@ -1,0 +1,20 @@
+Student Pass/
+Overall pass or fail
+If the mark is 40 or above, display “Pass”.
+Otherwise, display “Fail”.
+
+FUNCTION main()
+    sub1=66
+    sub2=77
+    sub3=35
+    result= validation(sub1,sub2,sub3)
+    DISPLAY result
+    END FUNCTION
+
+FUNCTION validation(sub1,sub2,sub3)
+    IF sub1 >=40 AND sub2>=40 AND sub3>= 40 THEN
+    Return "Pass"
+    ELSE
+    Return "Fail"
+    END IF
+    END FUNCTION

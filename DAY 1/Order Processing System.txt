@@ -1,0 +1,29 @@
+Order Processing System
+An order system processes multiple customer orders one by one.
+For each order, it checks stock availability.
+If stock is sufficient, the order is confirmed and stock is updated.
+If not, the order is rejected.
+
+Function order(stocks,orders)
+    FOR EACH product in orders
+    FOR EACH stock in stocks
+
+    IF stock.id == product.id
+    IF Stock.quantity>=product.quantity THEN
+    Stock.quantity=Stock.quantity-product.quantity
+    DISPLAY "Order confirmed ", product.id
+    ELSE
+   DISPLAY "Order rejected", product.id
+    END IF
+    END IF
+    END FOR
+    END FOR
+    END FUNCTION
+
+Function main()
+    stocks=[{id:1, quantity:10}, {id:2, quantity:5}, {id:3, quantity:0}]
+    orders=[{id:1, quantity:2}, {id:2, quantity:6}, {id:3, quantity:1}]
+    result=order(stocks,orders)
+    DISPLAY result
+    END FUNCTION
+    

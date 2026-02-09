@@ -1,0 +1,19 @@
+
+Attendance Eligibility
+A student’s attendance percentage is calculated.
+If attendance is 75% or more, the student is eligible to write the exam.
+Otherwise, the student is not eligible.
+
+
+Function Eligibility(attendance)
+    IF attendance >= 75
+    DISPLAY "Eligible to write the exam"
+    ELSE
+    DISPLAY "Not eligible to write the exam"
+    END IF
+    END FUNCTION
+
+FUNCTION main()
+    Attendance = 80
+    Eligibility()
+    END FUNCTION
