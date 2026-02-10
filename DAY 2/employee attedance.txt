@@ -1,0 +1,29 @@
+Employee Attendance Processing
+
+A system processes attendance for multiple employees.
+For each employee, calculate attendance percentage.
+If attendance is 75% or more, mark the employee as eligible.
+Otherwise, mark as not eligible.
+
+FUNCTION main()
+    employee={
+        [name:"prithi",presentdays:55],
+        [name :"Vel",presentdays:89]
+    }
+    totaldays=80
+    result= attendance(totaldays, employee)
+    DISPLAY result
+    END FUNCTION
+
+FUNCTION attendance(totaldays,employee)
+    FOR EACH employees IN employee
+    percentage = (employees.presentdays / totaldays) * 100
+    IF percentage >= 75 THEN
+    employees.status = "Eligible"
+    ELSE
+    employees.status = "Not Eligible"
+    END IF
+    END FOR
+    Return employee
+    END FUNCTION
+    
