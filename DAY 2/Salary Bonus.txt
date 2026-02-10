@@ -1,0 +1,18 @@
+An employee enters basic salary.
+If salary is greater than ₹30,000, add a bonus of ₹5,000.
+Otherwise, no bonus is added.
+
+FUNCTION main()
+    salary=50000
+    result=bonus(salery)
+    DISPLAY result
+    END FUNCTION
+
+FUNCTION bonus(salary)
+    IF salary > 30000 THEN
+    totalsalary = salary + 5000
+    Return "Your total salary after bonus",totalsalary
+    ELSE
+    Return "Your salary without bonus",salary
+    END IF
+    END FUNCTION

@@ -1,0 +1,18 @@
+A movie ticket system checks the user’s age.
+If age is 18 or above, allow booking.
+Otherwise, deny booking.
+
+
+FUNCTION main()
+    age =20
+    result=ticketbooking(age)
+    DISPLAY result
+    END FUNCTION
+
+FUNCTION ticketbooking(age)
+    IF age>= 18 THEN
+    Return "Booking allowed"
+    ELSE
+    Return "Booking Denied"
+    END IF
+    END FUNCTION

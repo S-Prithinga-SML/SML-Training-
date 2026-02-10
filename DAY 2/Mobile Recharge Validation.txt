@@ -1,0 +1,20 @@
+Mobile Recharge Validation
+
+A user enters a recharge amount.
+If the amount is greater than zero, recharge is successful.
+Otherwise, display an invalid amount message.
+
+
+FUNCTION recharge(amount)
+    IF amount <= 0 THEN
+        Return "Recharge amount must be greater than 0"
+        ELSE
+        Return " Recharge successful"
+        End IF
+        End FUNCTION
+
+FUNCTION main()
+    amount=50
+    result=result(amount)
+    display result
+    End FUNCTION

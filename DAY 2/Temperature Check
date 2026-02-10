@@ -1,0 +1,22 @@
+Temperature Check
+
+A system reads the temperature value.
+If temperature is above 37°C, display “Fever detected”.
+Otherwise, display “Normal”.
+
+FUNCTION main()
+    celcius=35
+    result=temperaturecheck(celcius)
+    DISPLAY result
+    END FUNCTION
+
+FUNCTION temperaturecheck(celcius)
+    IF celcius < 0 THEN
+    Return " invalid temperature"
+    ELSE IF celcius > 37 THEN
+    Return "Fever detected"
+    ELSE
+    Return "Normal"
+    END IF
+    END FUNCTION
+    
