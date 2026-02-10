@@ -1,0 +1,27 @@
+Bank Minimum Balance
+
+A bank account checks balance after withdrawal.
+If balance falls below ₹1,000, display a warning message.
+Otherwise, allow normal operation.
+
+FUNCTION main()
+    balance=1000
+    withdrawal=500
+    result=checkbalance(balance,withdrawal)
+    DISPLAY result
+    END FUNCTION
+
+FUNCTION checkbalance(balance,withdrawal)
+    IF balance < withdrawal THEN
+    Return "Insufficient funds"
+    ELSE
+    newbalance= balance - withdrawal
+    IF newbalance < 1000 THEN
+    Return "Amount must be geater that 1000"
+    ELSE
+    Return "Withdrawal successful. New balance: " + newbalance
+    END IF
+    END IF
+    END FUNCTION
+
+    

@@ -1,0 +1,33 @@
+Shopping Cart Tax Calculation
+
+A shopping cart calculates total amount.
+If total exceeds ₹10,000, add 18% tax.
+Otherwise, add 12% tax.
+Display the final amount.
+
+
+FUNCTION main()
+    cart ={
+        [item1: 5000],
+        [item2:500],
+        [item3:3000]
+    }
+    result= calculateTax(cart)
+    DISPLAY result
+    END FUNCTION
+
+FUNCTION calculateTax(cart)
+    total=0
+    FOR EACH carts:cart
+    total = total + carts
+    END FOR
+    IF total < 10000 THEN
+    tax = total * 0.12
+    finalamount= total+tax
+    ELSE
+    tax = total * 0.18
+    finalamount= total+tax
+    END IF
+    Return finalamount
+    END FUNCTION
+

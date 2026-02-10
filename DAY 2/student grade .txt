@@ -1,0 +1,27 @@
+Student Grade Calculation
+
+A student has marks in three subjects.
+Calculate the average.
+If average is 75 or above, assign Grade A.
+If average is between 60 and 74, assign Grade B.
+Otherwise, assign Grade C.
+
+FUNCTION main()
+    sub1= 96
+    sub2= 83
+    sub3= 77
+    result= grade(sub1,sub2,sub3)
+    DISPLAY result
+    END FUNCTION
+
+FUNCTION grade(sub1,sub2,sub3)
+    avg=(sub1+sub2+sub3)/3
+    IF avg >= 75 THEN
+    Return "Grade A"
+    ELSE IF avg >= 60 THEN
+    Return "Grade B"
+    ELSE
+    Return "Grade C"
+    END IF
+    END FUNCTION
+    
