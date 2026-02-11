@@ -1,0 +1,38 @@
+Order Stock Management
+
+A system processes multiple customer orders.
+For each order, check product stock.
+If stock is available, confirm order and reduce stock.
+If not, reject the order.
+
+FUNCTION main()
+    order={
+        [productid: 15,stock:5],
+        [productid: 16,stock:0],
+        [productid: 17,stock:10],
+        [productid: 20,Stock:15]
+    }
+    customer={
+        [productid: 15, quantity:2]
+        [productid: 16, quantity:1],
+        [productid: 17, quantity:5],
+        [productid: 20, quantity:20]
+    }
+    result=orderstock(order,customer)
+    DISPLAY result
+    END FUNCTION
+
+FUNCTION orderstock (order,customer)
+        FOR EACH orders in order
+        FOR customers in cusstomer
+        IF order.productid == customer.productid THEN
+        IF order.stock>= customer.quantity THEN
+        order.stock=order.stock-customer.quantity
+        DISPLAY "Order is confirmed",productid
+        ELSE
+        DISPLAY "order rejected"
+        END IF
+        END IF
+        END FOR
+        END FOR
+        END FUNCTION

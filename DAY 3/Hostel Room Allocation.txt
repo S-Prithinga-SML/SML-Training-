@@ -1,0 +1,43 @@
+Hostel Room Allocation
+
+A hostel allocates rooms to multiple students.
+For each student, check room availability.
+If rooms are available, allocate room and reduce count.
+Otherwise, display “Rooms not available”.
+
+
+FUNCTION main()
+
+    totalroom={
+        [roomno:101],
+        [roomno:102],
+        [roomno:103],
+        [roomno:104],
+        [roomno:105]
+    }
+    room=LENGTH(totalroom)
+    student={
+        [studentid:85],
+        [studentid:86],
+        [studentid:97],
+        [studentid:55],
+        [studentid:75],
+        [studentid:65],
+        [studentid:12]
+    }
+    result=hostelroom(totalroom,student,room)
+    DISPLAY result
+    END FUNCTION
+
+FUNCTION hostelroom(totalroom,student,room)
+    FOR EACH students IN student
+    IF room >0 THEN
+    allocatedroom = REMOVE_FIRST(totalroom)
+    DISPLAY "Room is allocated",student.studentid , "Allocated Room " ,allocatedroom.roomno
+    room=room-1
+    ELSE
+    DISPLAY "Room is not available",student.studentid
+    END If
+    END IF
+    END FOR
+    END FUNCTION
