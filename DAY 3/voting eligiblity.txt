@@ -1,0 +1,20 @@
+Voting Eligibility
+
+A citizen enters age.
+If age is 18 or above, allow voting.
+Otherwise, display “Not eligible to vote”.
+
+
+FUNCTION main()
+    age=20
+    result=voting(age)
+    DISPLAY result
+    END FUNCTION
+
+FUNCTION voting(age)
+    IF age >=18 THEN
+    Return "Eligible to vote"
+    ELSE
+    Return "Not eligible to vote"
+    END IF
+    END FUNCTION

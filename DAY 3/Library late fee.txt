@@ -1,0 +1,22 @@
+A library checks the number of days a book is returned late.
+If days are greater than 0, calculate late fee as ₹5 per day.
+Otherwise, display “No fine”.
+
+FUNCTION main()
+    actualreturndate= 21-07-2025
+    duedate= 20-07-2025
+    result=latefees(actualreturndate, duedate)
+    DISPLAY result
+    END FUNCTION
+
+
+FUNCTION latefees(actualreturndate,duedate)
+    IF duedate >= actualreturndate THEN
+    Return "No fine"
+    ELSE
+    dayslate=actualreturndate - duedate
+    fine=dayslate * 5
+    Return fine
+    END IF
+    END FUNCTION
+

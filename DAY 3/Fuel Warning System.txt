@@ -1,0 +1,20 @@
+A vehicle system checks fuel level.
+If fuel level is less than 10 liters, display “Low fuel warning”.
+Otherwise, display “Fuel level normal”.
+
+FUNCTION main()
+    fuellevel=8
+    result=fuel(fuellevel)
+    DISPLAY result
+    END FUNCTION
+
+
+FUNCTION fuel(fuellevel)
+    IF fuellevel>=10 THEN
+    Return "Fuel level normal"
+    ELSE
+    Return "Low fuel warning"
+    END IF
+    END FUNCTION
+
+    

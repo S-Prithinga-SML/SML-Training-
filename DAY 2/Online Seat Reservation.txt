@@ -1,31 +1,31 @@
-Online Seat Reservation
+    Online Seat Reservation
 
-A system has limited seats available.
-For each booking request, check seat availability.
-If seats are available, confirm booking and reduce seat count.
-If seats are not available, reject the booking.
+    A system has limited seats available.
+    For each booking request, check seat availability.
+    If seats are available, confirm booking and reduce seat count.
+    If seats are not available, reject the booking.
 
 
-FUNCTION main()
-    booking={
-        [customer:01, seat:2],
-        [customer:02, seat:3],
-        [customer:03, seat:1],
-        [customer:04, seat:4]
-    }
-    totalseats=10
-    result=Reservation(booking,totalseats)
-    DISPLAY result
-    END FUNCTION
+    FUNCTION main()
+        booking={
+            [customer:01, seat:2],
+            [customer:02, seat:3],
+            [customer:03, seat:1],
+            [customer:04, seat:4]
+        }
+        totalseats=10
+        result=Reservation(booking,totalseats)
+        DISPLAY result
+        END FUNCTION
 
-FUNCTION Reservation(booking,totalseats)
-    
-    FOR EACH book:booking
-    IF book.seat <= totalseats THEN
-    totalseats = totalseats - book.seats
-    ELSE
-    totalsalary=totalseats
-    END IF
-    END FOR
-    Return totalseats
-    END FUNCTION
+    FUNCTION Reservation(booking,totalseats)
+        
+        FOR EACH book:booking
+        IF book.seat <= totalseats THEN
+        totalseats = totalseats - book.seats
+        ELSE
+        totalsalary=totalseats
+        END IF
+        END FOR
+        Return totalseats
+        END FUNCTION

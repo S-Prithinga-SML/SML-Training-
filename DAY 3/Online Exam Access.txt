@@ -1,0 +1,18 @@
+A student enters an exam access code.
+If the code matches the predefined code, allow access.
+Otherwise, deny access.
+
+FUNCTION main()
+    examcode=78945
+    studententeredcode=78945
+    result=accessexam(examcode, studententeredcode)
+    DISPLAY result
+    END FUNCTION
+
+FUNCTION accessexam(examcode,studententeredcode)
+    IF examcode== studententeredcode THEN
+    Return "Access granted"
+    ELSE
+    Return "Access denied"
+    END IF
+    END FUNCTION
