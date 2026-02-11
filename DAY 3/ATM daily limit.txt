@@ -1,0 +1,29 @@
+An ATM processes a withdrawal request.
+If withdrawal amount is less than or equal to daily limit and balance is sufficient, allow withdrawal.
+Otherwise, reject the transaction.
+
+
+FUNCTION main()
+    withdrawal={
+    [amount:1000],
+    [amount:1000],
+    [amount:100]
+    }
+    dailylimit=2000
+    balance=1500
+    result=limit(withdrawal,dailylimit,balance)
+    DISPLAY result
+    END FUNCTION
+
+FUNCTION limit(withdrawal,dailylimit,balance)
+    FOR EACH withdrawals IN withdrawal
+    totalwithdrawal=totalwithdrawal+withdrawals[amount]
+    END FOR
+    IF balance >= totalwithdrawal AND dailylimit >= totalwithdrawal THEN
+    Return "Withdrawal successful"
+    ELSE
+    Return "Withdrawal rejected"
+    END IF
+    END FUNCTION
+
+    

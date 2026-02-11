@@ -1,0 +1,24 @@
+Student Result Evaluation
+A student has marks in three subjects.
+If all subjects are passed (≥ 40), calculate total and display “Pass”.
+Otherwise, display “Fail”.
+
+
+FUNCTION main()
+    sub1=82
+    sub2=75
+    sub3=68
+    result=studentresult(sub1, sub2, sub3)
+    DISPLAY result
+    END FUNCTION
+
+
+FUNCTION studentresult(sub1,sub2,sub3)
+    IF sub1 >=40 AND sub2>= 40 AND sub3>= 40 THEN
+    total=sub1+sub2+sub3
+    Return "Pass. Total marks: " + total
+    ELSE
+    Return "Fail"
+    END IF
+    END FUNCTION
+    

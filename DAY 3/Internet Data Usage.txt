@@ -1,0 +1,24 @@
+Internet Data Usage
+
+A system checks daily internet usage.
+If usage exceeds daily limit, reduce speed.
+Otherwise, continue normal speed.
+
+
+
+FUNCTION main()
+    dailylimit=10
+    used=25
+    result=internet(used,dailylimit)
+    DISPLAY result
+    END FUNCTION
+
+
+FUNCTION internet(used,dailylimit)
+    IF dailylimit > used THEN
+    Return "Continue normal speed"
+    ELSE
+    Return "Reduce speed"
+    END IF
+    END FUNCTION
+    
