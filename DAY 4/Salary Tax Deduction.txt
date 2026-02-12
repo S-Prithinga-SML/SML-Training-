@@ -1,0 +1,23 @@
+An employee’s salary is processed.
+If salary is above ₹50,000, deduct 20% tax.
+If salary is between ₹30,000 and ₹50,000, deduct 10% tax.
+Otherwise, no tax is deducted.
+Display final salary.
+
+FUNCTION main()
+ salary=50000
+ finalsalary=deducet(salary)
+DISPLAY finalsalary
+END FUNCTION
+
+FUNCTION deducet(salary)
+    IF salary > 50000 THEN
+    final =salary-(salary*0.20)
+    ELSE IF salary >= 30000 AND salary <= 50000 THEN
+    final = salary-(salary*0.10)
+    ELSE
+    final = salary
+    END IF
+    END IF
+    Return final
+    

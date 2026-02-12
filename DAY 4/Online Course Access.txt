@@ -1,0 +1,24 @@
+A student tries to access a course.
+If the student is registered and payment is completed, allow access.
+Otherwise, deny access.
+
+
+FUNCTION main()
+    student={
+        [name: "Prithii" , Payment:"completed"],
+        [name: "Vel" , Payment:"pending"],
+        [name: "Mathii" , Payment:"completed"]
+    }
+    courseaccess=registered(student)
+    DISPLAY courseaccess
+    END FUNCTION
+
+FUNCTION registered(student)
+        FOR EACH students IN student
+        IF students.payment=="completed"
+        Display "Access granted for " + students.name
+        ELSE
+        Display "Access denied for " + students.name
+        END IF
+        END FOR
+        END FUNCTION

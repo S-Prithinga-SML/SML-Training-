@@ -1,0 +1,23 @@
+0–100 → ₹5 per unit
+101–200 → ₹7 per unit
+Above 200 → ₹10 per unit
+Calculate total bill.
+
+FUNCTION main()
+    units=150
+    totalbill=calculatebill(units)
+    DISPLAY totalbill
+END FUNCTION
+
+
+FUNCTION calculatebill(units)
+    IF units <=100 THEN
+    bill=units*5
+    ELSE IF units > 100 AND units <= 200 THEN
+    bill = (100 * 5) + ((units - 100) * 7)
+    ELSE
+    bill = (100 * 5) + (100 * 7) + ((units - 200) * 10)
+    END IF
+    END IF
+    Return bill
+END FUNCTION
