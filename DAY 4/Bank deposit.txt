@@ -1,0 +1,22 @@
+A user deposits money into an account.
+If deposit amount is greater than 0, add to balance.
+Otherwise, display “Invalid deposit amount”.
+
+
+FUNCTION main()
+    deposit=20000
+    balance=5000    
+    result=bankdeposit(deposit, balance)
+    DISPLAY result
+    END FUNCTION
+
+
+FUNCTION bankdeposit(deposit,balance)
+    IF deposit>0 THEN
+    balance=balance + deposit
+    Return balance
+    ELSE
+    Return "Invalid deposit amount"
+    END IF
+    END FUNCTION
+    

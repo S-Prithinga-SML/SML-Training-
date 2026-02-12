@@ -1,0 +1,19 @@
+A student enters hall ticket number.
+If hall ticket number matches stored value, allow entry.
+Otherwise, deny entry.
+
+FUNCTION main()
+    storedvalue=123456
+    enteredvalue=123456
+    result=checkentry(storedvalue, enteredvalue)
+    DISPLAY result
+    END FUNCTION
+
+FUNCTION checkentry(storedvalue,enteredvalue)
+    IF storedvalue== enteredvalue THEN
+    Return "Entry allowed"
+    ELSE
+    Return "Entry denied"
+    END IF
+    END FUNCTION
+    

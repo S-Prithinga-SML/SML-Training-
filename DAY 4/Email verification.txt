@@ -1,0 +1,19 @@
+A user enters an email address.
+If the email contains “@”, display “Valid format”.
+Otherwise, display “Invalid email format”.
+
+
+FUNCTION main()
+    email="prithu@gmail.com"
+    result=emailverification(email)
+    DISPLAY result
+    END FUNCTION
+
+FUNCTION emailverification(email)
+    IF "@" IN email THEN
+    Return "Valid format"
+    ELSE
+    Return "Invalid email format"
+    END IF
+    END FUNCTION
+        

@@ -1,0 +1,20 @@
+A parking system checks number of hours parked.
+If hours are less than or equal to 2, charge ₹50 per hour.
+Otherwise, charge ₹50 for first 2 hours and ₹30 for remaining hours.
+
+FUNCTION main()
+    hours=5
+    result=parkingfees(hours)
+    DISPLAY result
+    END FUNCTION
+
+FUNCTION parkingfees(hours)
+    IF hours<= 2 THEN
+    fee=hours * 50
+    Return fee
+    ELSE IF fees > 20 THEN
+    amount=fees-2
+    fee= (2 * 50) + (amount * 30)
+    Return fee
+    END IF
+    END FUNCTION
