@@ -1,0 +1,24 @@
+A customer requests a product return.
+If purchase date is within 7 days and product is not damaged, approve return.
+Otherwise, reject return.
+
+FUNCTION main()
+    orderedrate = 21-07-2025
+    returndate = 28-07-2025
+    productcondition = "good"
+    result = productreturn(orderedrate, returndate, productcondition)
+    DISPLAY result
+    END FUNCTION
+
+FUNCTION productreturn(orderedrate,returndate,productcondition)
+    difference=returndate-orderedrate 
+    IF difference<= 7 AND difference >=0 THEN
+    IF productcondition == "good" THEN
+    Return "Return approved"
+    ELSE
+    Return "product rejected"
+    END IF
+    ELSE
+    Return "Return rejected"
+    END IF
+    END FUNCTION

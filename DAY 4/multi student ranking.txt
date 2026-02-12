@@ -1,0 +1,36 @@
+Multi-Student Ranking
+
+System processes marks of multiple students.
+For each student:
+Calculate total marks
+If total ≥ 250 → Distinction
+If total between 200–249 → First Class
+Otherwise → Second Class
+Display classification for each student.
+
+
+FUNCTION main()
+    student ={
+        [name: "Prithii" , marks:[80, 90, 85]],
+        [name: "Vel" , marks:[70, 75, 80]],
+        [name: "Mathii" , marks:[60, 65, 70]]
+    }
+   result=rank(student)
+    DISPLAY result
+    END FUNCTION
+
+FUNCTION rank(student)
+    FOR EACH students IN student
+    total=0
+    FOR EACH mark IN student.mark
+    total= total+student.mark
+    END FOR
+    IF total >= 250 THEN
+    Display students.name + " with Distinction"
+    ELSE IF total >= 200 AND total < 250 THEN
+    Display students.name + " with First Class"
+    ELSE
+    Display students.name + " with Second Class"
+    END IF
+    END FOR
+    END FUNCTION
