@@ -1,0 +1,19 @@
+Electricity Bill with Fixed Charge
+If units ≤ 100 → ₹5 per unit
+If units > 100 → ₹7 per unit
+Also add a fixed charge of ₹100 to total bill.
+
+FUNCTION main()
+    units=120
+    totalBill=calculateBill(units)
+    DISPLAY totalBill
+    END FUNCTION
+
+FUNCTION calculateBill(units)
+    IF units <= 100 THEN
+    totalBill=(units*5)+100
+    ELSE
+    totalBill=(units*7)+100
+    END IF
+    Return totalBill
+    END FUNCTION

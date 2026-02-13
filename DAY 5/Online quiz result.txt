@@ -1,0 +1,25 @@
+Online Quiz Result
+Student answers 10 questions.
+For each correct answer, give 2 marks.
+If total ≥ 15 → Pass
+Otherwise → Fail
+
+
+
+FUNCTION main()
+    totalquestion = 10
+    correctanswer = 7
+    result=quiz(totalquestion,correctanswer)
+    DISPLAY result
+    END FUNCTION
+
+FUNCTION quiz(totalquestion,correctanswer)
+    total=correctanswer*2
+    IF total >= 15 THEN
+    Return "Pass"
+    ELSE
+    Return "Fail"
+    END IF
+    END FUNCTION
+    
+

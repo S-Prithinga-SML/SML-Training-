@@ -1,0 +1,22 @@
+Loan Approval
+Approve loan only if:
+Age ≥ 21
+Income ≥ ₹25,000
+Credit score ≥ 650
+Otherwise, reject.
+
+FUNCTION main()
+    age=25
+    income=30000
+    creditScore=700
+    result=approveLoan(age,income,creditScore)
+    DISPLAY result
+    END FUNCTION
+
+FUNCTION approveLoan(age,income,creditScore)
+    IF age>= 25 AND income >=25000 AND creditScore>=650 THEN
+    Return "Loan Approved"
+    ELSE
+    Return "Loan Rejected"
+    END IF
+    END FUNCTION
