@@ -1,0 +1,19 @@
+Discount Eligibility
+If customer is a premium member, apply 5% discount.
+Otherwise, no discount.
+
+FUNCTION main()
+    customer=premium
+    price=1000
+    finalPrice=calculateDiscount(customer,price)
+    DISPLAY finalPrice
+END FUNCTION
+
+FUNCTION calculateDiscount(customer,price)
+    IF customer = premium THEN
+    finalPrice=price-(price*0.05)
+    ELSE
+    finalPrice=price
+    END IF
+    Return finalPrice
+END FUNCTION

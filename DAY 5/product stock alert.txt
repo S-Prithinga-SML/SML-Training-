@@ -1,0 +1,16 @@
+Product Stock Alert
+If product quantity is less than 5, display “Low stock”.
+Otherwise, display “Stock available”.
+
+FUNCTION main()
+    quantity=3
+    result=checkStock(quantity)
+    DISPLAY result
+END FUNCTION
+FUNCTION checkStock(quantity)
+    IF quantity < 5 THEN
+    Return "Low stock"
+    ELSE
+    Return "Stock available"
+    END IF
+END FUNCTION

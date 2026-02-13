@@ -1,6 +1,6 @@
-A user enters an email address.
-If the email contains “@”, display “Valid format”.
-Otherwise, display “Invalid email format”.
+    A user enters an email address.
+    If the email contains “@”, display “Valid format”.
+    Otherwise, display “Invalid email format”.
 
 
 FUNCTION main()

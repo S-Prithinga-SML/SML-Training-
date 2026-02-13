@@ -1,0 +1,16 @@
+If a student’s mark is below 40, mark as “Eligible for retest”.
+Otherwise, mark as “Passed”.
+
+FUNCTION main()
+    mark=35
+    result=checkMark(mark)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION checkMark(mark)
+    IF mark < 40 THEN
+    Return "Eligible for retest"
+    ELSE
+    Return "Passed"
+    END IF
+END FUNCTION

@@ -1,0 +1,23 @@
+Bank Transfer
+A user transfers money from Account A to Account B.
+If Account A has sufficient balance, deduct from A and add to B.
+Otherwise, display “Insufficient balance”.
+
+
+FUNCTION main()
+    accountA=25000
+    accountB=15000
+    amount=20000
+    result=transfer(accountA,accountB,amount)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION transfer(accountA,accountB,amount)
+    IF accountA >= amount THEN
+    accountA=accountA-amount
+    accountB=accountB+amount
+    Return " Transfered Successfull"
+    ELSE
+    Return "Insufficient balance"
+    END IF
+END FUNCTION
