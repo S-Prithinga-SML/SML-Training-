@@ -1,0 +1,29 @@
+Inventory Management
+System processes multiple products.
+For each product:
+
+If stock ≤ 10 → mark “Reorder required”
+Else → mark “Sufficient stock”
+
+
+FUNCTION main()
+    product={
+        "ProductA": 8,
+        "ProductB": 15,
+        "ProductC": 5
+    }
+    result=checkStock(product)
+    DISPLAY result
+    END FUNCTION
+
+FUNCTION checkStock(product)
+    For each products in product
+    If product[products] <= 10 then
+    product[products]="Reorder required"
+    Else
+    product[products]="Sufficient stock"
+    End if
+    End for
+    Return product
+    END FUNCTION
+    
