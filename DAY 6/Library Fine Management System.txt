@@ -1,0 +1,33 @@
+Library Fine Management System
+A student returns a book.
+
+Rules:
+First 5 days late → ₹2 per day
+Next 5 days → ₹5 per day
+After 10 days → ₹10 per day
+If fine > ₹500 → Membership Suspended
+
+Display:
+Total fine
+Membership status
+
+FUNCTION main()
+    book=fine
+    days=5
+    fine=calculateFine(book,days)
+    DISPLAY fine
+END FUNCTION
+
+FUNCTION calculateFine(book,days)
+    IF book != "Fine" THEN
+    Return "Invalid book type"
+    END IF
+    IF days <= 5 THEN
+    Return days * 2
+    ELSE IF days <= 10 THEN
+    Return (5 * 2) + ((days - 5) * 5)
+    ELSE
+    Return (5 * 2) + (5 * 5) + ((days - 10) * 10)
+    END IF
+    END IF  
+    END FUNCTION

@@ -1,8 +1,8 @@
-Online Quiz Result
-Student answers 10 questions.
-For each correct answer, give 2 marks.
-If total ≥ 15 → Pass
-Otherwise → Fail
+    Online Quiz Result
+    Student answers 10 questions.
+    For each correct answer, give 2 marks.
+    If total ≥ 15 → Pass
+    Otherwise → Fail
 
 
 
@@ -21,5 +21,5 @@ FUNCTION quiz(totalquestion,correctanswer)
     Return "Fail"
     END IF
     END FUNCTION
-    
+
 

@@ -1,0 +1,38 @@
+Cinema Ticket Booking System
+
+Inputs:
+
+Number of tickets
+Seat Type (Normal / Premium)
+Day (Weekday / Weekend)
+
+Rules:
+Normal = ₹150
+Premium = ₹250
+Weekend → 20% extra
+If tickets > 5 → 10% group discount
+Display total amount.
+
+
+FUNCTION main()
+    tickets=8
+    seatType="Premium"
+    day="Weekend"
+    totalAmount=calculateAmount(tickets, seatType, day)
+    DISPLAY totalAmount
+    END FUNCTION
+
+FUNCTION calculateAmount(tickets, seatType, day)
+    IF seatType=="Premium" THEN 
+    amount = tickets * 250
+    ELSE IF seatType=="Normal" THEN
+    amount = tickets * 150
+    END IF
+    IF  day == "Weekend"
+    amount = amount + (amount * 0.20)
+    END IF
+    IF tickets > 5 THEN
+    amount = amount - (amount * 0.10)
+    END IF
+    Return amount
+    END FUNCTION

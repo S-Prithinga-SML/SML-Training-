@@ -1,0 +1,38 @@
+Bank Loan Eligibility Checker
+
+Inputs:
+Salary
+Credit Score
+Existing Loan (Yes/No)
+
+Rules:
+Salary ≥ ₹30,000
+Credit Score ≥ 700
+No existing loan
+
+If all satisfied → Loan Approved
+If salary low → Reject
+If credit score low → Reject
+If existing loan → Under Review
+Display final decision.
+
+
+FUNCTION main()
+    salary=50000
+    creditScore=750
+    existingLoan="No"
+    decision=checkEligibility(salary, creditScore, existingLoan)
+    DISPLAY decision
+    END FUNCTION
+
+FUNCTION checkEligibility(salary,creditScore,existingLoan)
+    IF salary >=30000 AND creditScore>=700 AND existingLoan == "No"
+    Return "Loan Approved"
+    ELSE IF salary < 30000 THEN
+    Return "Salary too low"
+    ELSE IF creditScore < 700 THEN
+    Return "Credit score too low"
+    ELSE IF existingLoan == "Yes" THEN
+    Return "Existing loan"
+    END IF
+    END FUNCTION

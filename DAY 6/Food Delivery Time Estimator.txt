@@ -1,0 +1,44 @@
+Food Delivery Time Estimator
+
+Inputs:
+Distance (km)
+Traffic Level (Low / Medium / High)
+Weather (Normal / Rain)
+
+Rules:
+Base time = 5 minutes per km
+Medium traffic → +10 mins
+High traffic → +20 mins
+Rain → +15 mins extra
+If final time > 60 mins → “Delayed Delivery”
+Display total estimated time
+
+FUNCTION main()
+    Distance=15
+    traffic="Low"
+    weather="Rain"
+    Time=calculateTime(Distance, traffic, weather)
+    DISPLAY Time
+    END FUNCTION
+
+FUNCTION calculateTime(Distance,traffic,weather)
+    IF Distance < 0 THEN
+    Return "Invalid distance"
+    END IF
+    IF traffic == "Low"
+    Time = Distance * 5
+    ELSE IF traffic == "Medium" THEN
+    Time = (Distance * 5) + 10
+    ELSE IF traffic == "High" THEN
+    Time = (Distance * 5) + 20
+    END IF
+    IF weather == "Normal" THEN
+    Time = Time
+    ELSE IF weather == "Rain" THEN
+    Time = Time + 15
+    END IF
+    IF Time > 60 THEN
+    Return "Delayed Delivery"
+    END IF
+    Return Time
+    END FUNCTION
