@@ -1,0 +1,33 @@
+Warehouse Temperature Monitoring
+
+Input:
+Temperature value
+
+Rules:
+< 0 → Freezing Alert
+0–10 → Cold Storage
+11–25 → Normal
+26–40 → Warning
+40 → Critical Alert
+If critical → Send Emergency Notification.
+
+
+FUNCTION main()
+    temp=20
+    status=checkTemperature(temp)
+    DISPLAY status
+    END FUNCTION
+
+FUNCTION checkTemperature(temp)
+    IF temp < 0 THEN
+    Return "Freezing Alert"
+    ELSE IF temp <= 10 THEN
+    Return "Cold Storage"
+    ELSE IF temp <= 25 THEN
+    Return "Normal"
+    ELSE IF temp <= 40 THEN
+    Return "Warning"
+    ELSE
+    Return "Critical Alert"
+    END IF
+    END FUNCTION

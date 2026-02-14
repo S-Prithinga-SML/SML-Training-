@@ -1,0 +1,31 @@
+College Attendance Eligibility
+
+Inputs:
+Total classes
+Attended classes
+Medical leave (Yes/No)
+
+Rules:
+Attendance ≥ 75% → Eligible
+65–74% and Medical leave → Eligible
+Below 65% → Not Eligible
+
+FUNCTION main()
+    totalClasses=100
+    attendedClasses=70
+    medicalLeave="Yes"
+    eligibility=check(totalClasses, attendedClasses, medicalLeave)
+    DISPLAY eligibility
+    END FUNCTION
+
+
+FUNCTION check(totalClasses, attendedClasses, medicalLeave)
+    Attendance=(attendedClasses/totalClasses)/100
+    IF Attendance >= 0.75 THEN
+    Return "Eligible"
+    ELSE IF Attendance >= 0.65 AND medicalLeave == "Yes" THEN
+    Return "Eligible"
+    ELSE
+    Return "Not Eligible"
+    END IF
+    END FUNCTION

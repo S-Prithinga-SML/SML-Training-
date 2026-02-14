@@ -1,0 +1,29 @@
+Hospital Patient Priority System
+
+Inputs:
+Age
+Emergency Level (Low / Medium / High)
+
+Rules:
+High emergency → Immediate
+Age > 60 and Medium → High priority
+Low emergency → Normal queue
+Display priority level.
+
+
+FUNCTION main()
+    age=65
+    emergencyLevel="Medium"
+    priority=determinePriority(age, emergencyLevel)
+    DISPLAY priority
+    END FUNCTION
+
+FUNCTION determinePriority(age, emergencyLevel)
+    IF emergencyLevel == "High" THEN
+    Return "Immediate"
+    ELSE IF emergencyLevel == "Medium" AND age > 60 THEN
+    Return "High Priority"
+    ELSE
+    Return "Normal Queue"
+    END IF
+    END FUNCTION

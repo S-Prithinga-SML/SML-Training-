@@ -1,0 +1,35 @@
+Ride Sharing Fare Splitter
+
+Inputs:
+Total fare
+Number of passengers
+Payment method (Cash / Online)
+
+Rules:
+Split equally
+If Online → 5% cashback
+If passengers > 4 → Extra ₹100 charge
+
+Display:
+Individual share
+Final amount after cashback (if applicable)
+
+
+FUNCTION main()
+    fare=1000
+    passengers=5
+    paymentMethod="Online"
+    Share=calculateShare(fare, passengers, paymentMethod)
+    DISPLAY Share
+    END FUNCTION
+
+FUNCTION calculateShare(fare,passengers,paymentMethod)
+    IF passengers > 4 THEN 
+    fare = fare + 100
+    END IF
+    share = fare / passengers
+    IF paymentMethod == "Online" THEN
+    fare = share - (share * 0.05)
+    END IF
+    Return share
+    END FUNCTION
