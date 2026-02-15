@@ -1,0 +1,36 @@
+Fuel Station Billing System
+
+Inputs:
+Fuel type (Petrol / Diesel)
+Liters
+Payment mode (Card / UPI / Cash)
+
+Rules:
+Petrol = ₹110 per liter
+Diesel = ₹95 per liter
+Card payment → 2% extra charge
+UPI → 1% discount
+Display final bill amount.
+
+FUNCTION main()
+    fuel="Petrol"
+    Liters=5
+    payment="UPI"
+    Billing=bunk(fuel,Liters,payment)
+    Display Billing
+    END FUNCTION
+
+FUNCTION bunk(fuel,Liters,Payment)
+    IF fuel == "Petrol" THEN
+    amount=Liters*110 
+    ELSE IF Fuel == "Diesel" THEN
+    amount = Liters*75
+    END IF
+    IF payment== "Card" THEN
+    amount=amount +(amount*0.2)
+    ELSE IF payment== "UPI" THEN
+    amount =amount-(amount*0.1)
+    END IF
+
+    
+    

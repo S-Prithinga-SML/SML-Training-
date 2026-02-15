@@ -1,0 +1,39 @@
+Subscription Renewal Checker
+
+Inputs:
+Days remaining
+Subscription type (Basic / Pro)
+
+Rules:
+If days ≤ 5 → Renewal Reminder
+If expired → Service Blocked
+Pro users get 7 extra grace days
+Display subscription status.
+
+FUNCTION main()
+    subscriptiontype="Basic"
+    days=15
+    Renewal=subscription(subscriptiontype,days)
+    Display Renewal
+    END FUNCTION
+
+FUNCTION subscription(subscriptiontype,days)
+    IF subscriptiontype == "Basic" THEN
+    IF days < 0 THEN
+    RETURN  "Service Blocked
+    ELSE IF days <=5 THEN
+    RETURN "Renewal Reminder"
+    ELSE
+    RETURN "Still you have so many days"
+    END If
+    ELSE IF subscriptiontype == "Pro" THEN
+    IF days < -7 THEN
+    RETURN "Service Blocked"
+    ELSE IF days < 0 THEN
+    RETURN "Grace Period Active"
+    ELSE IF days <= 5 THEN
+    RETURN "Renewal Reminder"
+    ELSE
+    RETURN "Still you have so many days"
+    END IF
+    END FUNCTION
