@@ -1,0 +1,24 @@
+System processes transactions for multiple customers.
+For each transaction:
+If type = “credit” → add amount
+If type = “debit” AND balance sufficient → deduct
+If insufficient → reject
+Track final balance for each customer.
+
+FUNCTION main()
+    transactionType="debit"
+    amount=50
+    balance=100
+    result= processTransaction(transactionType, amount, balance)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION processTransaction(transactionType, amount , balance)
+    IF transactionType == "credit" THEN
+    Return balance + amount
+    ELSE IF transactionType == "debit" AND balance >= amount THEN
+    Return balance - amount
+    ELSE
+    Return "Reject transaction"
+    END IF
+END FUNCTION

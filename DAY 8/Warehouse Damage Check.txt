@@ -1,0 +1,17 @@
+A product is scanned in warehouse.
+If product status is marked as “Damaged”, move to rejected section.
+Otherwise, move to storage.
+
+FUNCTION main()
+    status = "Damaged"
+    result = product(status)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION product(status)
+    IF status == "Damaged" THEN
+    Return "Move to rejected section"
+    ELSE
+    Return "Move to storage"
+    END IF
+END FUNCTION

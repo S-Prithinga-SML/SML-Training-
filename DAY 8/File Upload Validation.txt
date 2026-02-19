@@ -1,0 +1,21 @@
+A system checks uploaded file:
+If file size > 10MB → reject
+If file type not allowed → reject
+If both valid → accept upload
+
+FUNCTION main()
+    file=5
+    fileType="pdf"
+    result= validateFile(file, fileType)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION validateFile(file,fileType)
+    IF file >10 THEN
+    Return "Reject"
+    ELSE IF fileType != "pdf" THEN
+    Return "Reject"
+    ELSE
+    Return "Accept upload"
+    END IF
+END FUNCTION

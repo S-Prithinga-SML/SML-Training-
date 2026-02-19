@@ -1,0 +1,23 @@
+For multiple passengers:
+If boarding pass valid AND security cleared → allow boarding
+If security failed → deny boarding
+If boarding time passed → deny boarding
+Count total boarded passengers.
+
+FUNCTION main()
+    boarding =true
+    security = true
+    boardingTime = 10
+    result = boardingSystem(boarding, security, boardingTime)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION boardingSystem(boarding, security, boardingTime)
+    IF boarding == "True" AND security == "True" AND boardingTime > 0 THEN
+    Return "Allow boarding"
+    ELSE IF security == "False" THEN
+    Return "Deny boarding"
+    ELSE IF boardingTime <= 0 THEN
+    Return "Deny boarding"
+    END IF
+END FUNCTION

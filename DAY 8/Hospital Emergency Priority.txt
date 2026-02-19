@@ -1,0 +1,21 @@
+For each arriving patient:
+If condition = “Critical” → assign highest priority
+If condition = “Serious” → medium priority
+Else → normal priority
+Display priority for each patient.
+
+FUNCTION main()
+    condition = "Serious"
+    priority = patient(condition)
+    DISPLAY priority
+END FUNCTION
+
+FUNCTION patient(condition)
+    IF condition == "Critical" THEN
+    Return "Assign highest priority"
+    ELSE IF condition == "Serious" THEN
+    Return "Assign medium priority"
+    ELSE
+    Return "Assign normal priority"
+    END IF
+END FUNCTION

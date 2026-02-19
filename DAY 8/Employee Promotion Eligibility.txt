@@ -1,0 +1,23 @@
+An employee is eligible for promotion if:
+Experience ≥ 5 years
+AND
+Performance rating ≥ 4
+AND
+No disciplinary actions
+Otherwise, not eligible.
+
+FUNCTION main()
+    Experience=10
+    PerformanceRating=4
+    disciplinary=false
+    result= promotion(Experience, PerformanceRating, disciplinary)  
+    DISPLAY result
+END FUNCTION
+
+FUNCTION promotion(Experience,PerformanceRating,disciplinary)
+    IF Experience >= 5 AND PerformanceRating >= 4 AND disciplinary =="True" THEN
+    Return "Eligible for promotion"
+    ELSE
+    Return "Not eligible for promotion"
+    END IF
+END FUNCTION

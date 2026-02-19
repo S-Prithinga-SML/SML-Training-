@@ -1,0 +1,24 @@
+Parking Fee Calculator
+
+Input:
+Hours parked
+
+Rules:
+First 2 hours → ₹20/hour
+After 2 hours → ₹40/hour
+Display total parking fee.
+
+FUNCTION main()
+    hours = 5
+    fees= parked(hours)
+    Display fees
+    END FUNCTION
+
+FUNCTION fees(hours)
+    IF hours <= 2 THEN
+    hours =hours *2
+    ELSE IF hours <= 4 THEN
+    hours= (2*20)+((hours -2)*40)
+    END IF 
+    END FUNCTION
+    

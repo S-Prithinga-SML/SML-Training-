@@ -1,0 +1,17 @@
+An online exam system checks remaining time.
+If time reaches 0, auto-submit the exam.
+Otherwise, allow the student to continue.
+
+FUNCTION main()
+    time=30
+    result= exam(time)
+    DISPLAY result
+    EnD FUNCTION
+
+FUNCTION exam(time)
+    IF time == 0 THEN
+    Return "Auto submit the exam"
+    ELSE
+    Return "Continue the exam"
+    END IF
+END FUNCTION

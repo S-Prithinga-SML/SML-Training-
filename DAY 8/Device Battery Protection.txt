@@ -1,0 +1,17 @@
+A mobile device checks battery level.
+If battery level is below 5%, shut down device.
+Otherwise, continue normal operation.
+
+FUNCTION main()
+    batteryLevel=4
+    result= device(batteryLevel)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION device(batteryLevel)
+    IF batteryLevel < 5 THEN
+    Return "Shut down device"
+    ELSE
+    Return "Continue normal operation"
+    END IF
+END FUNCTION

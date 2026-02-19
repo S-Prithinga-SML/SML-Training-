@@ -1,0 +1,23 @@
+Courier Charge Calculator
+
+Input:
+Weight (kg)
+
+Rules:
+First 5 kg → ₹50 per kg
+Above 5 kg → ₹80 per kg
+
+
+FUNCTION main()
+    kg=20
+    Courier=charge(kg)
+    DISPLAY Courier
+    END FUNCTION
+
+FUNCTION charge(kg)
+    IF kg <= 5 THEN
+    total = kg*50
+    ELSE
+    total =( (5*50)+(kg-5)*80)
+    END IF
+    END FUNCTION

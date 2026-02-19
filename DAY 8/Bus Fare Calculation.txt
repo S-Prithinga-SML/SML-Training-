@@ -1,0 +1,21 @@
+Passenger fare depends on distance travelled:
+First 5 km → ₹10 per km
+Next 10 km → ₹8 per km
+Beyond that → ₹5 per km
+Calculate total fare.
+
+FUNCTION main()
+    distance=12
+    fare= calculateFare(distance)
+    DISPLAY fare
+END FUNCTION
+
+FUNCTION calculateFare(distance)
+    IF distance <= 5 THEN
+    Return distance * 10
+    ELSE IF distance <= 15 THEN
+    Return (5 * 10) + ((distance - 5) * 8)
+    ELSE
+    Return (5 * 10) + (10 * 8) + ((distance - 15) * 5)
+    END IF
+END FUNCTION

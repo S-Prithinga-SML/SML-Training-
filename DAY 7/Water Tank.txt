@@ -1,0 +1,25 @@
+Water Tank Monitor
+
+Input:
+Current water level (liters)
+
+Rules:
+< 200 → Low Water
+200–800 → Normal
+800 → Overflow Risk
+
+FUNCTION main()
+    water=700
+    range=tank(water)
+    DISPLAY range
+    END FUNCTION
+
+FUNCTION tank(water)
+    IF water <200 THEN
+    RETURN "Low Water"
+    ELSE IF water >= 200 AND water < 800 THEN
+    RETURN "Normal"
+    ELSE
+    RETURN "Overflow"
+    END IF
+    END FUNCTION

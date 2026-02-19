@@ -1,0 +1,19 @@
+A user’s subscription renewal date arrives.
+If auto-renew is enabled AND balance is sufficient, renew subscription.
+Otherwise, mark subscription as expired.
+
+FUNCTION main()
+    subscriptiondate=5
+    renew=true
+    balance=100
+    result= subscription(subscriptiondate, renew, balance)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION subscription(subscriptiondate,renew,balance)
+    IF subscriptiondate == 5 AND renew == "True" AND balance > 50 THEN
+    Return "Renew subscription"
+    ELSE
+    Return "Mark subscription as expired"
+    END IF
+END FUNCTION

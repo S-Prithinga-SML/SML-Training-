@@ -1,0 +1,12 @@
+Exam Pass Checker
+
+Input:
+Marks in 3 subjects
+
+Rules:
+
+Any subject < 35 → Fail
+Else → Pass
+Display result.
+
+FUNCTION main()
