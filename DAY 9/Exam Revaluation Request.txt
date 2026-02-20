@@ -1,0 +1,23 @@
+Exam Revaluation Request
+For each student request:
+If request submitted within 7 days AND fee paid → accept request
+Otherwise → reject request
+Track total accepted requests.
+
+FUNCTION main()
+    days=5
+    feespaid=true
+    accepted=0
+    result = revaluation(days,feespaid,accepted)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION revaluation(days,feespaid)
+
+    IF days<=7 AND feespaid == true THEN
+    accepted = accepted + 1
+    Return "Request accepted"
+    ELSE
+    Return "Request rejected"
+    END IF
+END FUNCTION

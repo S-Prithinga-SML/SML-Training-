@@ -1,0 +1,30 @@
+Hospital Bed Allocation
+
+System processes incoming patients.
+For each patient:
+If ICU required AND ICU bed available → allocate ICU bed
+Else if general bed available → allocate general bed
+Else → put patient on waiting list
+Track available beds after allocation.
+
+FUNCTION main()
+    icu=available
+    general=available
+    result = bed(icu,general)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION bed(icu,general)
+    IF icu == "Available" THEN
+    icu = "Occupied"
+    icuroom= icuroom-1
+    Return "ICU bed allocated"
+    ELSE IF general == "Available" THEN
+    general = "Occupied"
+    Return " General  allocated"
+    ELSE
+    Return "Patient on waiting list"
+    END IF
+END FUNCTION
+
+

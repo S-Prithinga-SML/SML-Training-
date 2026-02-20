@@ -1,0 +1,23 @@
+Online Auction System
+For each bid:
+If bid amount greater than current highest bid → update highest bid
+Otherwise → reject bid
+Display final highest bid.
+
+
+FUNCTION main()
+    bid=50000
+    highestbid = 60000
+    result=onlineauction(bid,highestbid)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION onlineauction(bid,highestbid)
+    IF bid > highestbid THEN 
+    highestbid=bid
+    Return "Highest  Bid"+highestbid
+    ELSE
+    Return "Bid rejected"
+    END IF
+END FUNCTION
+

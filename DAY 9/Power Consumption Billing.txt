@@ -1,0 +1,25 @@
+Power Consumption Billing
+Electricity charges:
+First 100 units → ₹4/unit
+Next 100 units → ₹6/unit
+Above 200 units → ₹8/unit
+Also add fixed service charge ₹150.
+
+
+FUNCTION main()
+    units=200
+    result = bill(units)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION bill(units)
+    IF units <=100 THEN
+    amount = units * 4 + 150
+    ELSE IF units > 100 AND units <=200 THEN
+    amount = 100 * 4 + (units-100) * 6 + 150
+    ELSE
+    amount = 100*4 + 100*6 + (unit-200)*8 +150
+    END IF
+    Return "Total amount :" + amount
+    END FUNCTION
+

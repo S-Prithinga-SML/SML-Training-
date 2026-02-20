@@ -1,0 +1,27 @@
+Car Rental System
+A customer requests a car rental.
+Allow rental only if:
+Customer age ≥ 21
+Valid driving license
+Car available
+If rental allowed, reduce car count.
+
+
+
+FUNCTION main()
+    age=25
+    license="Valid"
+    available=5
+    result = car(age,license,available)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION car(age,license,available)
+    IF age >= 21 AND license== "valid" AND available >=1 THEN 
+    available = available - 1
+    Return " Car is available"
+    ELSE
+    Return "Car is not available"
+    END IF
+END FUNCTION
+

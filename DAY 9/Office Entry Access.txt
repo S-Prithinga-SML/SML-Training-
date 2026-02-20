@@ -1,0 +1,20 @@
+Office Entry Access
+An employee scans ID card.
+If employee ID exists AND access level ≥ required level, allow entry.
+Otherwise, deny access.
+
+FUNCTION main()
+    employeeid="AC231"
+    accesslevel=3
+    result = access(employeeid,accesslevel)
+    DISPLAY result
+END FUNCTION
+
+
+FUNCTION access(employeeid,accesslevel)
+    IF employeeid == "AC231" AND accesslevel >= 3 THEN
+    Return "Allow entry"
+    ELSE
+    Return "Deny access"
+    END IF
+END FUNCTION

@@ -1,0 +1,23 @@
+Water Tank Monitoring
+A water tank system checks water level.
+If level > 90%, stop motor.
+If level < 20%, start motor.
+Otherwise, keep current state.
+
+
+FUNCTION main()
+    level = 95
+    result = waterTank(level)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION waterTank(level)
+    IF level > 90 THEN
+    Return "Stop motor"
+    ELSE IF level < 20 THEN
+    Return "Start motor"
+    ELSE
+    Return "Keep current state"
+    END IF
+END FUNCTION
+

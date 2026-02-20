@@ -1,0 +1,20 @@
+Online Profile Completion
+If user has uploaded profile photo AND verified email AND filled all required fields, mark profile as “Complete”.
+Otherwise, mark as “Incomplete”.
+
+FUNCTION main()
+    photo= true
+    email= true
+    fields= true
+    result=profile(photo,email,fields)
+    DISPLAY result
+END FUNCTION
+
+
+FUNCTION profile(photo,email,fields)
+    IF profile == true AND email == true AND fields == true THEN
+    Return "Complete"
+    ELSE
+    Return "Incomplete"
+    END IF
+END FUNCTION

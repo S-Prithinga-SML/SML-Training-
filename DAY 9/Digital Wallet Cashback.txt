@@ -1,0 +1,21 @@
+Digital Wallet Cashback
+A customer makes a payment.
+If payment amount ≥ ₹1000, give 5% cashback.
+Otherwise, no cashback.
+
+
+FUNCTION main()
+    amount = 10000
+    result = cashback(amount)
+    DISPLAY result
+END FUNCTION
+
+
+FUNCTION cashback(amount)
+    IF amount>=10000 THEN
+    amount= amount*0.5
+    Return amount + "5% cashback"
+    ELSE
+    Return "No cashback"
+    END IF
+END FUNCTION

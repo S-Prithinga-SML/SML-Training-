@@ -1,0 +1,31 @@
+Multi-Branch Bank Transaction Processor
+
+System processes transactions for multiple branches.
+For each transaction:
+If type = deposit → add to branch balance
+If type = withdrawal AND balance sufficient → deduct
+If insufficient → reject transaction
+At end, display final balance for each branch.
+
+FUNCTION main()
+    type="deposit"
+    amount=1000
+    balance=5000
+    result=transaction(type,amount,balance)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION transaction(type,amount,balance)
+    IF type == "deposit" THEN
+    balance = balance + amount
+    Return "Amount deposit" +balance
+    ELSE IF amount== "withdrawal" THEN
+    IF balance >= amount THEN
+    balance = balance - amount
+    Return "Amount withdrawal" +balance
+    ELSE
+    Return "Transaction rejected"
+    END IF
+    END IF
+END FUNCTION
+
