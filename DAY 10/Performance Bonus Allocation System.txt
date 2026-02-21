@@ -1,0 +1,41 @@
+Performance Bonus Allocation System
+
+For multiple employees:
+If performance ≥ 90 → 20% bonus
+If 75–89 → 10% bonus
+If 60–74 → 5% bonus
+Below 60 → No bonus
+
+Also:
+If attendance < 70% → no bonus regardless of performance
+Track total bonus payout.
+
+FUNCTION main()
+    employees={
+        [performance=95, attendance=80],
+        [performance=85, attendance=65],
+        [performance=70, attendance=75],
+        [performance=55, attendance=90]
+    }
+    totalBonus = calculateBonus(employees)
+    DISPLAY totalBonus
+END FUNCTION
+
+FUNCTION calculateBonus(employees)
+    totalBonus = 0
+    FOR each employee IN employees
+        IF employee.attendance < 70 THEN
+            bonus = 0
+        ELSE IF employee.performance >= 90 THEN
+            bonus = 0.20
+        ELSE IF employee.performance >= 75 THEN
+            bonus = 0.10
+        ELSE IF employee.performance >= 60 THEN
+            bonus = 0.05
+        ELSE
+            bonus = 0
+        END IF
+        totalBonus = totalBonus + (bonus * 100) 
+    END FOR
+    Return totalBonus
+END FUNCTION

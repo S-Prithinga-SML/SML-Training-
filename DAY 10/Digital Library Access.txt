@@ -1,0 +1,21 @@
+Digital Library Access
+
+A user tries to access an e-book.
+If user membership is active, allow download.
+Otherwise, show “Membership expired”.
+
+FUNCTION main()
+    membership="active"
+    result = accessLibrary(membership)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION accessLibrary(membership)
+    IF membership == "active" THEN
+    Return "Download allowed"
+    ELSE
+    Return "Membership expired"
+    END IF
+END FUNCTION
+
+    

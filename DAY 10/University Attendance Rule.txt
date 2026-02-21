@@ -1,0 +1,24 @@
+If attendance ≥ 75% → Eligible
+Else if attendance between 60–74% → Conditionally eligible
+Else → Not eligible
+Count how many are fully eligible.
+
+FUNCTION main()
+    attendance=[89,78,89,40,80]
+    eligibleCount = countEligible(attendance)
+    Display eligibleCount
+END FUNCTION
+
+FUNCTION countEligible(attendance)
+    For each attendances > attendance THEN
+    count=0
+    If attendance >= 75 THEN
+    count=count +1
+    ELSE IF attendance >=60 AND attendance <=74 THEN
+    count=count +0.5
+    ELSE
+    count=count +0
+    End If
+    End For
+    Return count
+END FUNCTION

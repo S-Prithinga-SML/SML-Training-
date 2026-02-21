@@ -1,0 +1,41 @@
+Smart Warehouse Distribution
+
+Warehouse processes multiple branch requests.
+For each branch:
+If requested quantity ≤ available stock → fulfill fully
+If partial stock available → send partial and record shortage
+If no stock → mark as pending
+
+Track:
+Total fulfilled
+Total partial
+Total pending
+Remaining stock
+
+FUNCTION main()
+    Stock = 100
+    Requests = [30, 50, 20, 10]
+    result = processRequests(Stock, Requests)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION processRequests(Stock, Requests)
+    totalFulfilled = 0
+    totalPartial = 0
+    totalPending = 0
+    
+    FOR each request IN Requests
+        IF request <= Stock THEN
+            Stock = Stock - request
+            totalFulfilled = totalFulfilled + request
+        ELSE IF Stock > 0 THEN
+            totalPartial = totalPartial + Stock
+            Stock = 0
+            totalPending = totalPending + (request - Stock)
+        ELSE
+            totalPending = totalPending + request
+        END IF
+    END FOR
+    
+    Return totalFulfilled +  totalPartial + totalPending + Stock
+END FUNCTION

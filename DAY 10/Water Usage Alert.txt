@@ -1,0 +1,17 @@
+If daily water usage exceeds limit, display “Usage exceeded”.
+Otherwise, display “Within limit”.
+
+FUNCTION main()
+    usage = 120
+    limit = 100
+    result = checkWaterUsage(usage, limit)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION checkWaterUsage(usage, limit)
+    IF usage > limit THEN
+    Return "Usage exceeded"
+    ELSE
+    Return "Within limit"
+    END IF
+END FUNCTION

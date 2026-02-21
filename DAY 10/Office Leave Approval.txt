@@ -1,0 +1,27 @@
+Office Leave Approval
+
+An employee requests leave.
+Approve leave only if:
+Leave balance sufficient
+No critical project assigned
+Manager approval = Yes
+Otherwise, reject and display reason.
+
+FUNCTION main()
+    leaveBalance = 10
+    criticalProject = False
+    managerApproval = "Yes"
+    result = approveLeave(leaveBalance, criticalProject, managerApproval)
+    DISPLAY result
+END FUNCTION
+FUNCTION approveLeave(leaveBalance, criticalProject, managerApproval)
+    IF leaveBalance < 5 THEN
+    Return "Insufficient balance of leave"
+    ELSE IF criticalProject == "True" THEN
+    Return "Assigned to critical project"
+    ELSE IF managerApproval != "Yes" THEN
+    Return "Manager approval required"
+    ELSE
+    Return "Leave approved"
+    END IF
+END FUNCTION

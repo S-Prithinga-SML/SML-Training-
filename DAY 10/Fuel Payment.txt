@@ -1,0 +1,22 @@
+A customer enters fuel quantity and price per litre.
+Calculate total cost.
+If payment amount is less than total cost, show “Insufficient payment”.
+
+FUNCTION main()
+    quantity=50
+    price=100
+    result=petrol(quantity,price)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION petrol(quantity,price)
+    IF quantity < 0 THEN
+    Return "Invalid quantity"
+    ELSE IF price < 0 THEN
+    Return "Invalid price"
+    ELSE
+    totalCost = quantity * price
+    Return "Total cost: " + totalCost
+    END IF
+END FUNCTION
+ 

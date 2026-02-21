@@ -1,0 +1,26 @@
+Cinema Ticket Allocation
+
+For each booking request:
+If seats available → allocate and reduce count
+If seats not available → reject
+Track total seats sold.
+
+FUNCTION main()
+    totalSeats = 100
+    bookingRequests = [30, 50, 20, 10]
+    totalSold = allocateTickets(totalSeats, bookingRequests)
+    DISPLAY "totalSold
+END FUNCTION
+
+FUNCTION allocateTickets(totalSeats, bookingRequests)
+    totalSold = 0
+    FOR each request IN bookingRequests
+    IF request <= totalSeats THEN
+    totalSeats = totalSeats - request
+    totalSold = totalSold + request
+    ELSE
+    DISPLAY "Booking rejected " 
+    END IF
+    END FOR
+    Return totalSold
+END FUNCTION

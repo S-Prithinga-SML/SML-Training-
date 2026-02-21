@@ -1,0 +1,20 @@
+If delivery status is “Out for delivery”, display “Arriving today”.
+If status is “Delivered”, display “Delivered successfully”.
+Otherwise, display “In transit”.
+
+
+FUNCTION main()
+    status = "Out for delivery"
+    result = checkDelivery(status)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION checkDelivery(status)
+    IF status == "Out for delivery" THEN
+    Return "Arriving today"
+    ELSE IF status == "Delivered" THEN
+    Return "Delivered successfully"
+    ELSE
+    Return "In transit"
+    END IF
+END FUNCTION

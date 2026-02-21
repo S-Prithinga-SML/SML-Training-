@@ -1,0 +1,31 @@
+For each product:
+
+Add price × quantity
+If category = “Clothing” → 10% discount
+If category = “Furniture” → 5% discount
+Display final total.
+
+
+FUNCTION main()
+    product={
+        [price = 100, quantity = 4, category = "Furniture"],
+        [price = 50, quantity = 2, category = "Clothing"],
+        [price = 20, quantity = 5, category = "Other"]
+    }
+    total = calculateTotal(product)
+    DISPLAY total
+END FUNCTION
+
+FUNCTION calculateTotal(product)
+    FOR each products IN product 
+    total = 0
+    IF products.category == "Clothing" THEN
+    total=(product.price * product.quantity *0.10)
+    ELSE IF products.category == "Furniture" THEN
+    total=(product.price * product.quantity *0.05)
+    ELSE
+    total=(product.price * product.quantity)
+    END IF
+    END FOR
+    Return total
+END FUNCTION
