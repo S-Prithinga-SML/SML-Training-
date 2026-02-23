@@ -1,0 +1,35 @@
+For multiple service providers:
+
+If rating ≥ 4.5 AND reviews > 100 → mark as “Top Rated”
+If rating 3–4.4 → mark “Standard”
+Else → mark “Low Rated”
+Count top-rated providers.
+
+
+FUNCTION main ()
+    feedback ={
+    "A": {"rating": 4.6, "reviews": 150},
+    "B": {"rating": 4.2, "reviews": 80},
+    "C": {"rating": 3.8, "reviews": 120},
+    "D": {"rating": 2.9, "reviews": 50}
+    }
+    topRatedCount = countTopRated(feedback)
+    DISPLAY topRatedCount
+END FUNCTION
+
+
+FUNCTION countTopRated(feedback)
+    count = 0
+    FOR EACH provider IN feedback
+    rating = feedback[provider].rating
+    reviews = feedback[provider].reviews
+    IF rating >= 4.5 AND reviews > 100 THEN
+    count = count + 1
+    ELSE IF rating >= 3 AND rating <4.4 THEN
+    Display "Standard"
+    ELSE
+    Display "Low Rated"
+    END IF
+    END FOR
+    Return count
+END FUNCTION

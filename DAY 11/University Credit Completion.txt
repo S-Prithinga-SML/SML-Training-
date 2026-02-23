@@ -1,0 +1,25 @@
+University Credit Completion
+
+For each student:
+If completed credits ≥ required AND internship completed → eligible for graduation
+If credits complete but internship missing → pending internship
+Else → continue studies
+Track total eligible graduates.
+
+FUNCTION main()
+    credits = 4
+    required = 5
+    internship = true
+    result = CreditCompletion(credits, required, internship)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION CreditCompletion(credits, required, internship)
+    IF internship = false THEN
+    Return "Pending Internship"
+    ELSE IF credits >=  required AND internship == true THEN
+    Return "Eligible for Graduation"
+    ELSE
+    Return "Continue Studies"
+    END IF
+END FUNCTION

@@ -1,0 +1,28 @@
+For each employee entry attempt:
+
+If badge valid AND time within working hours → allow
+If badge valid but after hours → log suspicious entry
+If badge invalid → deny
+Track suspicious logs count.
+
+
+FUNCTION main()
+    Badge= true
+    time = 9
+    workingStart=9
+    workingEnd=21
+    suspicious=0
+    result = AccessBadge(Badge,time.workingStart,workingEnd,suspicious)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION AccessBadge(Badge,time,workingStart,workingEnd,suspicious)
+    IF badge == false THEN
+    Return "Access Denied"
+    ELSE if time >= workingStart AND time <= workingEnd THEN
+    Return "Access Allowed"
+    ELSE
+    suspicious=suspicious+1
+    Return "Suspicious Entry Logged"
+    END IF
+END FUNCTION

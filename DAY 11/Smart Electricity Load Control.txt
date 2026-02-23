@@ -1,0 +1,35 @@
+Smart Electricity Load Control
+
+System monitors multiple households.
+For each house:
+If usage > 120% of allowed load → apply penalty charge
+If usage between 90–120% → warning
+Else → normal
+Track total penalties applied.
+
+
+FUNCTION main()
+    usage=100
+    allowedload=80
+    result=Electricityload(usage, allowedload)
+    DISPLAY result
+END FUNCTION
+
+
+FUNCTION Electricityload(usage,allowedload)
+    warning=0.9 * allowedload
+    penalty = 1.2 * allowedload
+    IF warning > 0 AND penalty > 0 THEN
+    return " You are in the usage stage"
+    ELSE IF usage >= warning AND usage <= penalty THEN
+    Return "You are going to reavh the penalties stage"
+    ELSE IF usage > penalty THEN
+    Return "You are in the penalties stage"
+    overload= usage - allowedload
+    Return overload
+    ELSE
+    Return "Your usage is normal"
+    END IF
+END FUNCTION
+
+
