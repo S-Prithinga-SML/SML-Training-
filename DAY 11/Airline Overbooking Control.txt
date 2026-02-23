@@ -1,0 +1,42 @@
+For each passenger booking:
+
+If seats available → confirm
+If seats full but cancellation probability high → waitlist
+If overbooking exceeds limit → stop accepting bookings
+
+Track:
+Confirmed
+Waitlisted
+Rejected 
+
+FUNCTION main()
+    booking={
+    "passenger1": {"seats": 1},
+    "passenger2": {"seats": 1},
+    "passenger3": {"seats": 1},
+    "passenger4": {"seats": 1},
+    "passenger5": {"seats": 1}
+    }
+    totalSeats=4
+    confirmed=3
+    waitlisted=1
+    overbooking=2
+    Rejected=0
+    result=overbookingControl(booking,totalSeats,confirmed,waitlisted,rejected,overbooking)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION overbookingControl(booking,totalSeats,confirmed,waitlisted,rejected,overbooking)
+    FOR EACH passenger IN booking
+    IF confirmed < totalSeats THEN
+    confirmed =confirmed + 1
+    ELSE IF confirmed < totalSeats + overbooking THEN
+    waitlisted=waitlisted + 1
+    ELSE
+    Rejected = Rejected + 1
+    END IF 
+    END FOR
+    Return totalSeats + confirmed + waitlisted + rejected
+END FUNCTION
+
+

@@ -1,0 +1,37 @@
+System processes multiple customers during flash sale.
+
+For each purchase:
+If stock available → deduct stock
+If stock becomes 0 → mark product as sold out
+If customer tries to buy sold-out item → reject
+
+Track:
+Total units sold
+Customers rejected due to no stock
+
+FUNCTION main()
+    purchase = {
+    "customer1": {"quantity": 5},
+    "customer2": {"quantity": 5},
+    "customer3": {"quantity": 5},
+    "customer4": {"quantity": 5},
+    "customer5": {"quantity": 5}
+    }
+    stock=50
+    totalUnitsSold = 0
+    customersRejected = 0
+    result= multiproduct(stock,customers,totalUnitsSold,customersRejected,purchase)
+    DISPLAY result
+END FUNCTION
+
+FUNCTION multiproduct(stock,customers,totalUnitsSold,customersRejected,purchase)
+    FOR EACH customer IN purchase
+    IF stock > 0 THEN
+    stock = stock - quantity
+    totalUnitsSold = totalUnitsSold + 1
+    ELSE IF stock < 0
+    customersRejected = customersRejected + 1
+    END IF
+    END FOR
+    Return "Total Units Sold: " + totalUnitsSold + ", Customers Rejected: " + customersRejected
+END FUNCTION

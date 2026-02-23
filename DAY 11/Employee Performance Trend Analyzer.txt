@@ -1,0 +1,37 @@
+Employee Performance Trend Analyzer
+
+For each employee over 3 months:
+If performance improving consecutively → mark “Rising”
+If decreasing consecutively → mark “Declining”
+Else → mark “Stable”
+Track how many are rising.
+
+
+
+FUNCTION main ()
+    performance={
+    "Employee1": [70, 75, 80],
+    "Employee2": [80, 78, 76],
+    "Employee3": [85, 85, 85],
+    "Employee4": [60, 65, 70]
+    }
+    result = count(performance)
+    Display result
+END FUNCTION
+
+FUNCTION count(performance)
+    risingcount=0
+    decreasingcount=0
+    FOR EACH employee in performance
+    m1 = performance[employee][0]
+    m2 = performance[employee][1]
+    m3 = performance[employee][2]
+    IF m1 < m2 AND m2 < m3 THEN
+    risingcount = risingcount + 1
+    ELSE IF m1 > m2 AND m2 > m3 THEN
+    ELSE 
+    Display "Stable"
+    END IF
+    END FOR
+    Return risingcount + decreasingcount
+END FUNCTION

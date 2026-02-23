@@ -1,0 +1,33 @@
+Bank Multi-Level Transaction Monitor
+
+For each customer transaction:
+If amount > ₹1,00,000 → mark high-value
+If more than 3 high-value transactions in a day → flag account
+If flagged twice in a week → temporarily freeze account
+Track frozen accounts.
+
+FUNCTION main()
+    transaction = [100000, 50000, 22000, 41000, 31000, 490000]
+    highValueCount = 0
+    flagCount = 0
+    frozenAccounts = 0
+    result = transactionMonitor(transaction, highValueCount, flagCount, frozenAccounts)
+    DISPLAY result
+END FUNCTION
+
+
+FUNCTION transactionMonitor(transaction, highValueCount, flagCount, frozenAccounts)
+    FOR EACH amount IN transaction
+    IF amount > 100000 THEN
+    highValueCount = highValueCount + 1
+    END IF
+    END FOR
+    IF highValueCount > 3 THEN
+    flagCount = flagCount + 1
+    END IF
+    IF flagCount >= 2 THEN
+    frozenAccounts = frozenAccounts + 1
+    DISPLAY "Account Temporarily Frozen"
+    END IF
+    RETURN "Total Frozen Accounts: " + frozenAccounts
+END FUNCTION
