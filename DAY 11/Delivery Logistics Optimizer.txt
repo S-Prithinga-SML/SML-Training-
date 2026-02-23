@@ -1,0 +1,44 @@
+For multiple delivery vehicles:
+
+If vehicle capacity sufficient → assign order
+If not → try next vehicle
+If no vehicle can handle → mark pending
+
+Track:
+Assigned deliveries
+Pending deliveries
+
+
+
+FUNCTION main()
+    orders={
+    "order1": {"quantity": 30},
+    "order2": {"quantity": 60},
+    "order3": {"quantity": 120},
+    "order4": {"quantity": 20},
+    "order5": {"quantity": 80}
+    }
+    twowheeler = 50
+    fourwheeler = 100
+    result = delivery(twowheeler,fourwheeler,orders)
+    DISPLAY result
+    END FUNCTION
+
+
+FUNCTION delivery(twowheeler,fourwheeler,orders)
+    Assignedorder = 0
+    pending=0
+    FOR EACH delivery IN orders
+    order = orders[delivery].quantity
+    IF order <= twowheeler THEN 
+    twowheeler =twowheeler - quantity
+    Assignedorder = Assignedorder+1
+    ELSE IF order <= fourwheeler THEN
+    fourwheeler = fourwheeler - quantity
+    Assignedorder = Assignedorder +1
+    ELSE
+    pending = pending +1
+    END IF
+    END FOR
+    Return "Assigned Deliveries: " + Assignedorder + ", Pending Deliveries: " + pending
+    END FUNCTION

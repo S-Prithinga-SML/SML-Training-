@@ -1,0 +1,70 @@
+School Section Allocation
+
+For each student:
+If marks ≥ 90 → Section A
+If 75–89 → Section B
+Else → Section C
+Each section has limited capacity.
+If section full → assign next available section.
+
+Track:
+Students per section
+Overflow handling
+
+Requires:
+Capacity tracking
+Conditional fallback
+
+
+FUNCTION main()
+    marks=90
+    section = allocateSection(marks)
+    DISPLAY section
+END FUNCTION
+
+FUNCTION allocateSection(marks)
+    sectionA=30
+    sectionB=30
+    sectionC=30
+    If marks >=90 THEN
+    If sectionA > 0 THEN
+    sectionA = sectionA -1 
+    Return "sectionA"
+    ELSE
+    IF sectionB > 0 THEN
+    sectionB =  sectionB-1
+    Return "SectionB"
+    Else
+    If sectionC > 0 THEN
+    sectionC = sectionC -1
+    Return "SectionC"
+    Else
+    Return "No Section Available"
+    End If
+    End If
+    End If
+
+    Else IF marks >=75 THEN 
+    IF sectionB  > 0 THEN
+    sectionB = sectionB -1
+    Return "SectionB"
+    ELSE
+    IF SectionC > 0 THEN
+    sectionC =sectionC-1
+    Return "SectionC"
+    ELSE 
+    Return "No section Available"
+    END IF
+    END IF
+
+    ELSE
+    IF sectionc > 0 THEN
+    SectionC = sectionC -1
+    Return "SectionC"
+    ELSE
+    Return " No section available"
+    END IF
+    END IF
+    END FUNCTION
+
+    
